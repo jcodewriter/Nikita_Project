@@ -150,15 +150,15 @@ export default function App() {
           <Grid item xs={8}>
             <div className={classes.paper}>
               <div className={classes.picker_wrapper}>
-                <Typography className={classes.title} variant="span">Job</Typography>
+                <Typography className={classes.title} variant="subtitle2">Job</Typography>
                 <div className={classes.job} style={{ background: 'linear-gradient(180deg, #0099e7, #11163a)' }}>
-                  {data.jobData.map((item) => <div className={classes.colorPickerCell} style={{ backgroundColor: checked ? 'transparent' : item }}></div>)}
+                  {data.jobData.map((item, key) => <div key={key} className={classes.colorPickerCell} style={{ backgroundColor: checked ? 'transparent' : item }}></div>)}
                 </div>
               </div>
               <div className={classes.picker_wrapper}>
-                <Typography className={classes.title} variant="span">Recipe</Typography>
+                <Typography className={classes.title} variant="subtitle2">Recipe</Typography>
                 <div className={classes.recipe} style={{ background: 'linear-gradient(180deg, #03a6f9, #0b1741)' }}>
-                  {data.recipeData.map((item) => <div className={classes.colorPickerCell} style={{ backgroundColor: checked ? 'transparent' : item }}></div>)}
+                  {data.recipeData.map((item, key) => <div key={key} className={classes.colorPickerCell} style={{ backgroundColor: checked ? 'transparent' : item }}></div>)}
                 </div>
               </div>
             </div>
@@ -166,8 +166,8 @@ export default function App() {
           <Grid item xs={4}>
             <div className={classes.paper}>
               <div className={classes.angle}>
-                <Typography className={classes.title} variant="span">Angle</Typography>
-                {data.angleData.map((item) => <div className={classes.angleCell}>{item}</div>)}
+                <Typography className={classes.title} variant="subtitle2">Angle</Typography>
+                {data.angleData.map((item, key) => <div key={key} className={classes.angleCell}>{item}</div>)}
               </div>
             </div>
           </Grid>
